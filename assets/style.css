@@ -1,0 +1,73 @@
+:root {
+  color-scheme: dark;
+  --background: #101722;
+  --surface: #182230;
+  --border: #2c394a;
+  --accent: #a8c7e8;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: var(--background); color: #e8edf4; -webkit-font-smoothing: antialiased; }
+::selection { background: #aecbea; color: #101722; }
+.glow { background: var(--background); }
+.glass { background: var(--surface); border: 1px solid var(--border); }
+.glass-hover { transition: border-color .2s, background .2s; }
+a.glass-hover:hover { border-color: #789bbb; background: #1c293a; }
+.gradient-text { color: var(--accent); background: none; }
+.pill { border: 1px solid #39485a; background: #202e3f; }
+.progress-track { background: #304055; overflow: hidden; border-radius: 4px; }
+.progress-fill { height: 100%; background: #8db5dd; border-radius: 4px; transition: width .3s; }
+.codebox { background: #0d141e; border: 1px solid #344458; color: #dee8f5; white-space: pre; overflow: auto; line-height: 1.8; tab-size: 4; }
+.codebox code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 13px; }
+.lesson-copy { line-height: 1.9; color: #bcc9d9; }
+.lesson-copy code { background: #25364a; padding: 2px 6px; color: #c1d9f2; border-radius: 4px; }
+.option { background: #14202e; border: 1px solid #35475b; transition: border-color .15s, background .15s; }
+.option:hover { border-color: #8db5dd; }
+.option.selected { border-color: #a8c7e8; background: #263e58; }
+.option.correct { border-color: #6abf9b; background: #183c33; }
+.option.wrong { border-color: #db9292; background: #40282e; }
+.btn-primary { background: #b9d4ef; color: #132337; font-weight: 600; border: 1px solid transparent; }
+.btn-primary:hover { background: #d0e3f7; }
+.btn-primary:disabled { opacity: .4; cursor: not-allowed; }
+.btn-outline { border: 1px solid #52657c; color: #e2ebf6; background: transparent; }
+.btn-outline:hover { border-color: #a8c7e8; background: #233246; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+.brand { font-size: 17px; font-weight: 700; letter-spacing: -.035em; }
+.logo-fallback { display: none; }
+.brand-image { object-fit: contain; }
+.lesson-number { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 1px solid #405570; border-radius: 8px; color: #c2d8f0; font-family: ui-monospace, Consolas, monospace; font-size: 16px; }
+details summary { cursor: pointer; }
+details[open] summary { color: #c2d8f0; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 3px solid #a8c7e8; outline-offset: 4px; }
+header { background: #101722f5 !important; }
+header .bg-gradient-to-br { background: #243b54; box-shadow: none; }
+main .font-black, main .font-extrabold { font-weight: 650; }
+main h1 { letter-spacing: -.045em; }
+main h2, main h3 { letter-spacing: -.025em; }
+main .rounded-3xl, main .rounded-2xl { border-radius: 12px; }
+main .rounded-xl { border-radius: 8px; }
+main .shadow-xl, main .shadow-lg { box-shadow: none; }
+main .blur-3xl { display: none; }
+main .bg-gradient-to-br { background: #1b2a3b; border-color: #3a526c; }
+.text-amber-300, .text-amber-400, .text-amber-200 { color: #b9d4ef !important; }
+.hover\:text-amber-300:hover { color: #e1edfa !important; }
+.bg-amber-400\/10 { background: #24384d !important; }
+.border-amber-500\/30, .border-amber-400\/30 { border-color: #455f7b !important; }
+.accent-amber-400 { accent-color: #b9d4ef; }
+#toast { background: #cee0f2; color: #132337; }
+#jornada { border-top: 1px solid var(--border); }
+#jornada > .grid > div { opacity: .75; }
+@media (max-width: 640px) {
+  .codebox code { font-size: 12px; }
+  .lesson-copy { line-height: 1.8; }
+  header .brand { font-size: 15px; }
+  main h1 { overflow-wrap: break-word; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Compact typography for course headings. */
+main h2 { font-size: clamp(1.25rem, 2.2vw, 1.75rem) !important; }
+main h3 { font-size: 1.125rem !important; }
